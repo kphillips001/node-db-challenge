@@ -1,9 +1,6 @@
-// Update with your config settings.
-
 module.exports = {
-
   development: {
-    client: 'sqlite3',
+    client: "sqlite3",
     useNullAsDefault: true,
     connection: {
       filename: "./data/projects.db3",
@@ -18,5 +15,6 @@ module.exports = {
       afterCreate: (conn, done) => {
         conn.run("PRAGMA foreign_keys = ON", done);
       },
+    },
   },
 };
